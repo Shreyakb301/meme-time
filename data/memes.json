@@ -1,0 +1,1485 @@
+[
+  {
+    "id": "dancing-baby",
+    "name": "Dancing Baby",
+    "createdYear": 1996,
+    "peakYear": 1997,
+    "category": "early-web",
+    "originPlatform": "Email / Usenet",
+    "description": "A 3D infant doing the cha-cha, rendered as an Autodesk demo and forwarded inbox to inbox until the whole world had seen it. The first thing the internet ever made famous.",
+    "status": "extinct",
+    "relatedMemes": [
+      "hampster-dance"
+    ],
+    "popularity": [
+      {
+        "year": 1996,
+        "score": 20
+      },
+      {
+        "year": 1997,
+        "score": 88
+      },
+      {
+        "year": 1998,
+        "score": 60
+      },
+      {
+        "year": 2000,
+        "score": 15
+      },
+      {
+        "year": 2010,
+        "score": 3
+      },
+      {
+        "year": 2026,
+        "score": 2
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/dancing-baby/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Dancing Baby meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Dancing_Baby",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/dancing-baby"
+    }
+  },
+  {
+    "id": "hampster-dance",
+    "name": "Hampster Dance",
+    "createdYear": 1998,
+    "peakYear": 1999,
+    "category": "early-web",
+    "originPlatform": "GeoCities",
+    "description": "Rows of animated hamster GIFs bopping to a sped-up loop. Built overnight for a sister bet about web traffic; visited by millions over dial-up.",
+    "status": "extinct",
+    "relatedMemes": [
+      "dancing-baby"
+    ],
+    "popularity": [
+      {
+        "year": 1998,
+        "score": 10
+      },
+      {
+        "year": 1999,
+        "score": 82
+      },
+      {
+        "year": 2000,
+        "score": 40
+      },
+      {
+        "year": 2005,
+        "score": 6
+      },
+      {
+        "year": 2026,
+        "score": 1
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Hampster Dance meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Hampster_Dance",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/hampster-dance"
+    }
+  },
+  {
+    "id": "all-your-base",
+    "name": "All Your Base Are Belong To Us",
+    "createdYear": 1998,
+    "peakYear": 2001,
+    "category": "gaming",
+    "originPlatform": "Something Awful / Newgrounds",
+    "description": "A gloriously mistranslated line from the 1991 game Zero Wing, remixed into one of the first internet-wide catchphrases.",
+    "status": "dormant",
+    "relatedMemes": [
+      "leeroy-jenkins"
+    ],
+    "popularity": [
+      {
+        "year": 1999,
+        "score": 8
+      },
+      {
+        "year": 2001,
+        "score": 78
+      },
+      {
+        "year": 2003,
+        "score": 35
+      },
+      {
+        "year": 2010,
+        "score": 10
+      },
+      {
+        "year": 2026,
+        "score": 5
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/all-your-base/original.png",
+      "localGif": "",
+      "giphySearchTerm": "All Your Base Are Belong To Us meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "All_your_base_are_belong_to_us",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/all-your-base-are-belong-to-us"
+    }
+  },
+  {
+    "id": "rickroll",
+    "name": "Rickroll",
+    "createdYear": 2007,
+    "peakYear": 2008,
+    "category": "video",
+    "originPlatform": "4chan / YouTube",
+    "description": "A bait-and-switch link to Rick Astley's 'Never Gonna Give You Up'. Evolved from 4chan's duckroll and became the internet's longest-running practical joke.",
+    "status": "immortal",
+    "relatedMemes": [
+      "keyboard-cat",
+      "all-your-base"
+    ],
+    "popularity": [
+      {
+        "year": 2007,
+        "score": 30
+      },
+      {
+        "year": 2008,
+        "score": 85
+      },
+      {
+        "year": 2012,
+        "score": 45
+      },
+      {
+        "year": 2020,
+        "score": 55
+      },
+      {
+        "year": 2026,
+        "score": 50
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/rickroll/original.png",
+      "localGif": "",
+      "giphySearchTerm": "Rickroll meme",
+      "youtubeVideoId": "dQw4w9WgXcQ",
+      "wikipediaPage": "Rickrolling",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/rickroll"
+    }
+  },
+  {
+    "id": "lolcats",
+    "name": "LOLcats",
+    "createdYear": 2006,
+    "peakYear": 2007,
+    "category": "animal",
+    "originPlatform": "4chan (Caturday)",
+    "description": "Cat photos captioned in broken 'I can has cheezburger?' English. Turned image macros into a mainstream pastime and a publishing empire.",
+    "status": "dormant",
+    "relatedMemes": [
+      "keyboard-cat",
+      "grumpy-cat",
+      "doge"
+    ],
+    "popularity": [
+      {
+        "year": 2006,
+        "score": 25
+      },
+      {
+        "year": 2007,
+        "score": 80
+      },
+      {
+        "year": 2010,
+        "score": 45
+      },
+      {
+        "year": 2015,
+        "score": 12
+      },
+      {
+        "year": 2026,
+        "score": 6
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/lolcats/original.jpeg",
+      "localGif": "",
+      "giphySearchTerm": "LOLcats meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Lolcat",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/lolcats"
+    }
+  },
+  {
+    "id": "keyboard-cat",
+    "name": "Keyboard Cat",
+    "createdYear": 2007,
+    "peakYear": 2009,
+    "category": "animal",
+    "originPlatform": "YouTube",
+    "description": "Fatso the cat 'playing' a keyboard riff, spliced onto the end of fail videos to play them off. Filmed in 1984; famous 25 years later.",
+    "status": "dormant",
+    "relatedMemes": [
+      "lolcats",
+      "rickroll"
+    ],
+    "popularity": [
+      {
+        "year": 2007,
+        "score": 5
+      },
+      {
+        "year": 2009,
+        "score": 75
+      },
+      {
+        "year": 2011,
+        "score": 35
+      },
+      {
+        "year": 2015,
+        "score": 10
+      },
+      {
+        "year": 2026,
+        "score": 4
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/keyboard-cat/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Keyboard Cat meme",
+      "youtubeVideoId": "J---aiyznGQ",
+      "wikipediaPage": "Keyboard_Cat",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/keyboard-cat"
+    }
+  },
+  {
+    "id": "chocolate-rain",
+    "name": "Chocolate Rain",
+    "createdYear": 2007,
+    "peakYear": 2007,
+    "category": "video",
+    "originPlatform": "YouTube",
+    "description": "Tay Zonday's baritone original song — one of YouTube's first homegrown viral stars, complete with the immortal annotation 'I move away from the mic to breathe in.'",
+    "status": "dormant",
+    "relatedMemes": [
+      "rickroll",
+      "gangnam-style"
+    ],
+    "popularity": [
+      {
+        "year": 2007,
+        "score": 72
+      },
+      {
+        "year": 2008,
+        "score": 40
+      },
+      {
+        "year": 2012,
+        "score": 12
+      },
+      {
+        "year": 2026,
+        "score": 4
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/chocolate-rain/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Chocolate Rain meme",
+      "youtubeVideoId": "EwTZ2xpQwpA",
+      "wikipediaPage": "Chocolate_Rain",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/chocolate-rain"
+    }
+  },
+  {
+    "id": "leeroy-jenkins",
+    "name": "Leeroy Jenkins",
+    "createdYear": 2005,
+    "peakYear": 2005,
+    "category": "gaming",
+    "originPlatform": "World of Warcraft forums",
+    "description": "A World of Warcraft raid plan ruined by one player charging in screaming his own name. The patron saint of doing it anyway.",
+    "status": "dormant",
+    "relatedMemes": [
+      "all-your-base",
+      "among-us"
+    ],
+    "popularity": [
+      {
+        "year": 2005,
+        "score": 70
+      },
+      {
+        "year": 2007,
+        "score": 40
+      },
+      {
+        "year": 2012,
+        "score": 18
+      },
+      {
+        "year": 2026,
+        "score": 8
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/leeroy-jenkins/original.webp",
+      "localGif": "",
+      "giphySearchTerm": "Leeroy Jenkins meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Leeroy_Jenkins",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/leeroy-jenkins"
+    }
+  },
+  {
+    "id": "trollface",
+    "name": "Trollface",
+    "createdYear": 2008,
+    "peakYear": 2011,
+    "category": "rage-comic",
+    "originPlatform": "DeviantArt / 4chan",
+    "description": "A crudely drawn grin that became the universal symbol of trolling. Drawn in MS Paint in minutes; printed on a decade of merchandise.",
+    "status": "dormant",
+    "relatedMemes": [
+      "rage-comics",
+      "forever-alone"
+    ],
+    "popularity": [
+      {
+        "year": 2008,
+        "score": 15
+      },
+      {
+        "year": 2011,
+        "score": 80
+      },
+      {
+        "year": 2014,
+        "score": 35
+      },
+      {
+        "year": 2021,
+        "score": 25
+      },
+      {
+        "year": 2026,
+        "score": 12
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/trollface/original.png",
+      "localGif": "",
+      "giphySearchTerm": "Trollface meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Trollface",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/trollface"
+    }
+  },
+  {
+    "id": "rage-comics",
+    "name": "Rage Comics",
+    "createdYear": 2008,
+    "peakYear": 2012,
+    "category": "rage-comic",
+    "originPlatform": "4chan / Reddit",
+    "description": "Stick-figure comic strips assembled from a shared library of faces — FFFUUUU, Me Gusta, Y U NO. Internet folk art made by everyone at once.",
+    "status": "extinct",
+    "relatedMemes": [
+      "trollface",
+      "forever-alone",
+      "wojak"
+    ],
+    "popularity": [
+      {
+        "year": 2009,
+        "score": 20
+      },
+      {
+        "year": 2012,
+        "score": 78
+      },
+      {
+        "year": 2014,
+        "score": 25
+      },
+      {
+        "year": 2018,
+        "score": 6
+      },
+      {
+        "year": 2026,
+        "score": 3
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/rage-comics/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Rage Comics meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Rage_comic",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/rage-comics"
+    }
+  },
+  {
+    "id": "forever-alone",
+    "name": "Forever Alone",
+    "createdYear": 2010,
+    "peakYear": 2011,
+    "category": "rage-comic",
+    "originPlatform": "4chan",
+    "description": "The loneliest rage face. Half joke, half confession, all of early-2010s internet feelings.",
+    "status": "extinct",
+    "relatedMemes": [
+      "rage-comics",
+      "wojak"
+    ],
+    "popularity": [
+      {
+        "year": 2010,
+        "score": 30
+      },
+      {
+        "year": 2011,
+        "score": 65
+      },
+      {
+        "year": 2014,
+        "score": 20
+      },
+      {
+        "year": 2026,
+        "score": 3
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Forever Alone meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/forever-alone"
+    }
+  },
+  {
+    "id": "nyan-cat",
+    "name": "Nyan Cat",
+    "createdYear": 2011,
+    "peakYear": 2011,
+    "category": "video",
+    "originPlatform": "YouTube / Tumblr",
+    "description": "A Pop-Tart cat flying through space on a rainbow, looped over a Japanese vocaloid track. Sold as an NFT a decade later for ~$600k.",
+    "status": "dormant",
+    "relatedMemes": [
+      "doge",
+      "dogecoin"
+    ],
+    "popularity": [
+      {
+        "year": 2011,
+        "score": 85
+      },
+      {
+        "year": 2013,
+        "score": 40
+      },
+      {
+        "year": 2018,
+        "score": 12
+      },
+      {
+        "year": 2021,
+        "score": 30
+      },
+      {
+        "year": 2026,
+        "score": 8
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/nyan-cat/original.png",
+      "localGif": "",
+      "giphySearchTerm": "Nyan Cat meme",
+      "youtubeVideoId": "QH2-TGUlwu4",
+      "wikipediaPage": "Nyan_Cat",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/nyan-cat"
+    }
+  },
+  {
+    "id": "doge",
+    "name": "Doge",
+    "createdYear": 2010,
+    "peakYear": 2013,
+    "category": "animal",
+    "originPlatform": "Tumblr / Reddit",
+    "description": "Kabosu the shiba inu, side-eyeing the camera, surrounded by Comic Sans inner monologue. Wow. Became a currency, a monument, a language.",
+    "status": "immortal",
+    "relatedMemes": [
+      "cheems",
+      "swole-doge",
+      "dogecoin",
+      "grumpy-cat"
+    ],
+    "popularity": [
+      {
+        "year": 2010,
+        "score": 5
+      },
+      {
+        "year": 2013,
+        "score": 90
+      },
+      {
+        "year": 2016,
+        "score": 45
+      },
+      {
+        "year": 2021,
+        "score": 75
+      },
+      {
+        "year": 2026,
+        "score": 55
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/doge/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Doge meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Doge_(meme)",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/doge"
+    }
+  },
+  {
+    "id": "grumpy-cat",
+    "name": "Grumpy Cat",
+    "createdYear": 2012,
+    "peakYear": 2013,
+    "category": "animal",
+    "originPlatform": "Reddit",
+    "description": "Tardar Sauce, a cat with feline dwarfism and a permanent scowl. The internet's id, in cat form. NO.",
+    "status": "dormant",
+    "relatedMemes": [
+      "lolcats",
+      "doge"
+    ],
+    "popularity": [
+      {
+        "year": 2012,
+        "score": 55
+      },
+      {
+        "year": 2013,
+        "score": 85
+      },
+      {
+        "year": 2016,
+        "score": 40
+      },
+      {
+        "year": 2019,
+        "score": 25
+      },
+      {
+        "year": 2026,
+        "score": 8
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/grumpy-cat/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Grumpy Cat meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Grumpy_Cat",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/grumpy-cat"
+    }
+  },
+  {
+    "id": "bad-luck-brian",
+    "name": "Bad Luck Brian",
+    "createdYear": 2012,
+    "peakYear": 2012,
+    "category": "image-macro",
+    "originPlatform": "Reddit",
+    "description": "A yearbook photo of maximal awkwardness, captioned with escalating misfortune. The real Brian turned out to be doing fine.",
+    "status": "extinct",
+    "relatedMemes": [
+      "rage-comics",
+      "doge"
+    ],
+    "popularity": [
+      {
+        "year": 2012,
+        "score": 75
+      },
+      {
+        "year": 2014,
+        "score": 30
+      },
+      {
+        "year": 2018,
+        "score": 8
+      },
+      {
+        "year": 2026,
+        "score": 3
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/bad-luck-brian/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Bad Luck Brian meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Bad_Luck_Brian",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/bad-luck-brian"
+    }
+  },
+  {
+    "id": "harlem-shake",
+    "name": "Harlem Shake",
+    "createdYear": 2013,
+    "peakYear": 2013,
+    "category": "video",
+    "originPlatform": "YouTube",
+    "description": "Thirty seconds: one person dances alone, the bass drops, everyone loses their minds. Tens of thousands of copies in a single month — the fastest meme of its era.",
+    "status": "extinct",
+    "relatedMemes": [
+      "gangnam-style",
+      "planking"
+    ],
+    "popularity": [
+      {
+        "year": 2013,
+        "score": 92
+      },
+      {
+        "year": 2014,
+        "score": 15
+      },
+      {
+        "year": 2018,
+        "score": 4
+      },
+      {
+        "year": 2026,
+        "score": 2
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/harlem-shake/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Harlem Shake meme",
+      "youtubeVideoId": "8vJiSSAMNWw",
+      "wikipediaPage": "Harlem_Shake_(meme)",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/harlem-shake"
+    }
+  },
+  {
+    "id": "gangnam-style",
+    "name": "Gangnam Style",
+    "createdYear": 2012,
+    "peakYear": 2012,
+    "category": "video",
+    "originPlatform": "YouTube",
+    "description": "PSY's horse dance — the first video to break a billion views, and the number that literally broke YouTube's 32-bit view counter.",
+    "status": "dormant",
+    "relatedMemes": [
+      "harlem-shake",
+      "chocolate-rain"
+    ],
+    "popularity": [
+      {
+        "year": 2012,
+        "score": 95
+      },
+      {
+        "year": 2013,
+        "score": 55
+      },
+      {
+        "year": 2016,
+        "score": 18
+      },
+      {
+        "year": 2026,
+        "score": 7
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/gangnam-style/original.png",
+      "localGif": "",
+      "giphySearchTerm": "Gangnam Style meme",
+      "youtubeVideoId": "9bZkp7q19f0",
+      "wikipediaPage": "Gangnam_Style",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/gangnam-style"
+    }
+  },
+  {
+    "id": "planking",
+    "name": "Planking",
+    "createdYear": 2011,
+    "peakYear": 2011,
+    "category": "photo-fad",
+    "originPlatform": "Facebook",
+    "description": "Lying face-down, rigid, in increasingly absurd locations, then posting the photo. The first great participation meme of the smartphone era.",
+    "status": "extinct",
+    "relatedMemes": [
+      "harlem-shake"
+    ],
+    "popularity": [
+      {
+        "year": 2011,
+        "score": 70
+      },
+      {
+        "year": 2012,
+        "score": 20
+      },
+      {
+        "year": 2015,
+        "score": 4
+      },
+      {
+        "year": 2026,
+        "score": 1
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Planking meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Planking_(fad)",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/planking"
+    }
+  },
+  {
+    "id": "pepe",
+    "name": "Pepe the Frog",
+    "createdYear": 2005,
+    "peakYear": 2016,
+    "category": "reaction",
+    "originPlatform": "4chan (Boy's Club comic)",
+    "description": "Matt Furie's chill cartoon frog, remixed into every emotion the internet has. A long, strange, contested history — feels good man.",
+    "status": "active",
+    "relatedMemes": [
+      "rare-pepe",
+      "wojak"
+    ],
+    "popularity": [
+      {
+        "year": 2008,
+        "score": 15
+      },
+      {
+        "year": 2015,
+        "score": 60
+      },
+      {
+        "year": 2016,
+        "score": 85
+      },
+      {
+        "year": 2020,
+        "score": 50
+      },
+      {
+        "year": 2026,
+        "score": 45
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/pepe/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Pepe the Frog meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Pepe_the_Frog",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/pepe-the-frog"
+    }
+  },
+  {
+    "id": "rare-pepe",
+    "name": "Rare Pepe",
+    "createdYear": 2015,
+    "peakYear": 2016,
+    "category": "crypto",
+    "originPlatform": "4chan",
+    "description": "Watermarked 'rare' Pepes traded like collectible cards — first ironically, then literally, on the blockchain. NFTs before NFTs.",
+    "status": "dormant",
+    "relatedMemes": [
+      "pepe",
+      "dogecoin"
+    ],
+    "popularity": [
+      {
+        "year": 2015,
+        "score": 40
+      },
+      {
+        "year": 2016,
+        "score": 60
+      },
+      {
+        "year": 2021,
+        "score": 35
+      },
+      {
+        "year": 2026,
+        "score": 10
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Rare Pepe meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/rare-pepes"
+    }
+  },
+  {
+    "id": "wojak",
+    "name": "Wojak",
+    "createdYear": 2010,
+    "peakYear": 2018,
+    "category": "reaction",
+    "originPlatform": "Krautchan / 4chan",
+    "description": "The bald 'feels guy', endlessly forked into doomers, bloomers, NPCs and yelling traders. The internet's stick figure of the soul.",
+    "status": "active",
+    "relatedMemes": [
+      "pepe",
+      "npc-wojak",
+      "rage-comics"
+    ],
+    "popularity": [
+      {
+        "year": 2011,
+        "score": 15
+      },
+      {
+        "year": 2018,
+        "score": 65
+      },
+      {
+        "year": 2021,
+        "score": 75
+      },
+      {
+        "year": 2026,
+        "score": 60
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/wojak/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Wojak meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Wojak",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/wojak"
+    }
+  },
+  {
+    "id": "npc-wojak",
+    "name": "NPC Wojak",
+    "createdYear": 2018,
+    "peakYear": 2018,
+    "category": "reaction",
+    "originPlatform": "4chan / Twitter",
+    "description": "A gray, expressionless Wojak that accuses its target of running on autopilot. Spawned endless variants through the algorithm era.",
+    "status": "active",
+    "relatedMemes": [
+      "wojak"
+    ],
+    "popularity": [
+      {
+        "year": 2018,
+        "score": 70
+      },
+      {
+        "year": 2020,
+        "score": 45
+      },
+      {
+        "year": 2024,
+        "score": 40
+      },
+      {
+        "year": 2026,
+        "score": 35
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "NPC Wojak meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/npc-wojak"
+    }
+  },
+  {
+    "id": "cheems",
+    "name": "Cheems",
+    "createdYear": 2019,
+    "peakYear": 2020,
+    "category": "animal",
+    "originPlatform": "Reddit / Twitter",
+    "description": "Balltze the shiba, who cannot pronounce words without adding an M. Paired against Swole Doge to compare eras of anythimg.",
+    "status": "active",
+    "relatedMemes": [
+      "doge",
+      "swole-doge"
+    ],
+    "popularity": [
+      {
+        "year": 2019,
+        "score": 25
+      },
+      {
+        "year": 2020,
+        "score": 75
+      },
+      {
+        "year": 2023,
+        "score": 45
+      },
+      {
+        "year": 2026,
+        "score": 30
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Cheems meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/cheems"
+    }
+  },
+  {
+    "id": "swole-doge",
+    "name": "Swole Doge vs. Cheems",
+    "createdYear": 2020,
+    "peakYear": 2020,
+    "category": "reaction",
+    "originPlatform": "Twitter / Reddit",
+    "description": "Buff Doge as the glorious past, smol Cheems as the disappointing present. History as a two-panel format.",
+    "status": "dormant",
+    "relatedMemes": [
+      "doge",
+      "cheems"
+    ],
+    "popularity": [
+      {
+        "year": 2020,
+        "score": 70
+      },
+      {
+        "year": 2021,
+        "score": 45
+      },
+      {
+        "year": 2024,
+        "score": 18
+      },
+      {
+        "year": 2026,
+        "score": 10
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Swole Doge vs. Cheems meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/swole-doge-vs-cheems"
+    }
+  },
+  {
+    "id": "dogecoin",
+    "name": "Dogecoin",
+    "createdYear": 2013,
+    "peakYear": 2021,
+    "category": "crypto",
+    "originPlatform": "Reddit",
+    "description": "A joke cryptocurrency with Doge's face that became a real market phenomenon. The meme escaped the screen and acquired a price chart.",
+    "status": "active",
+    "relatedMemes": [
+      "doge",
+      "rare-pepe"
+    ],
+    "popularity": [
+      {
+        "year": 2013,
+        "score": 20
+      },
+      {
+        "year": 2017,
+        "score": 35
+      },
+      {
+        "year": 2021,
+        "score": 90
+      },
+      {
+        "year": 2026,
+        "score": 40
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/dogecoin/original.png",
+      "localGif": "",
+      "giphySearchTerm": "Dogecoin meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Dogecoin",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/dogecoin"
+    }
+  },
+  {
+    "id": "distracted-boyfriend",
+    "name": "Distracted Boyfriend",
+    "createdYear": 2017,
+    "peakYear": 2017,
+    "category": "reaction",
+    "originPlatform": "Twitter",
+    "description": "A 2015 stock photo of a wandering eye, relabeled into the universal diagram of misplaced priorities.",
+    "status": "dormant",
+    "relatedMemes": [
+      "drake-hotline-bling",
+      "woman-yelling-at-cat"
+    ],
+    "popularity": [
+      {
+        "year": 2017,
+        "score": 88
+      },
+      {
+        "year": 2018,
+        "score": 50
+      },
+      {
+        "year": 2021,
+        "score": 20
+      },
+      {
+        "year": 2026,
+        "score": 12
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/distracted-boyfriend/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Distracted Boyfriend meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Distracted_boyfriend_meme",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/distracted-boyfriend"
+    }
+  },
+  {
+    "id": "drake-hotline-bling",
+    "name": "Drake Hotline Bling",
+    "createdYear": 2015,
+    "peakYear": 2016,
+    "category": "reaction",
+    "originPlatform": "Twitter / Instagram",
+    "description": "Drake recoiling, Drake approving. The two-row template that turned preference into a format.",
+    "status": "dormant",
+    "relatedMemes": [
+      "distracted-boyfriend",
+      "expanding-brain"
+    ],
+    "popularity": [
+      {
+        "year": 2015,
+        "score": 60
+      },
+      {
+        "year": 2016,
+        "score": 80
+      },
+      {
+        "year": 2019,
+        "score": 40
+      },
+      {
+        "year": 2026,
+        "score": 15
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Drake Hotline Bling meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/drakeposting"
+    }
+  },
+  {
+    "id": "expanding-brain",
+    "name": "Expanding Brain",
+    "createdYear": 2017,
+    "peakYear": 2017,
+    "category": "reaction",
+    "originPlatform": "Reddit",
+    "description": "Four panels of increasingly cosmic brains ranking ideas from mundane to enlightened — usually in the wrong order, on purpose.",
+    "status": "dormant",
+    "relatedMemes": [
+      "drake-hotline-bling",
+      "is-this-a-pigeon"
+    ],
+    "popularity": [
+      {
+        "year": 2017,
+        "score": 75
+      },
+      {
+        "year": 2018,
+        "score": 50
+      },
+      {
+        "year": 2021,
+        "score": 22
+      },
+      {
+        "year": 2026,
+        "score": 10
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Expanding Brain meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/galaxy-brain"
+    }
+  },
+  {
+    "id": "woman-yelling-at-cat",
+    "name": "Woman Yelling at a Cat",
+    "createdYear": 2019,
+    "peakYear": 2019,
+    "category": "reaction",
+    "originPlatform": "Twitter",
+    "description": "A Real Housewives screaming match spliced with Smudge the cat sitting at a salad. Two images that were never meant to meet.",
+    "status": "dormant",
+    "relatedMemes": [
+      "distracted-boyfriend",
+      "mocking-spongebob"
+    ],
+    "popularity": [
+      {
+        "year": 2019,
+        "score": 85
+      },
+      {
+        "year": 2020,
+        "score": 45
+      },
+      {
+        "year": 2023,
+        "score": 15
+      },
+      {
+        "year": 2026,
+        "score": 8
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Woman Yelling at a Cat meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/woman-yelling-at-a-cat"
+    }
+  },
+  {
+    "id": "mocking-spongebob",
+    "name": "Mocking SpongeBob",
+    "createdYear": 2017,
+    "peakYear": 2017,
+    "category": "reaction",
+    "originPlatform": "Twitter",
+    "description": "sPoNgEbOb As A cHiCkEn, plus alternating caps, equals the official font of sarcasm.",
+    "status": "dormant",
+    "relatedMemes": [
+      "expanding-brain",
+      "is-this-a-pigeon"
+    ],
+    "popularity": [
+      {
+        "year": 2017,
+        "score": 80
+      },
+      {
+        "year": 2018,
+        "score": 55
+      },
+      {
+        "year": 2021,
+        "score": 25
+      },
+      {
+        "year": 2026,
+        "score": 12
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Mocking SpongeBob meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/mocking-spongebob"
+    }
+  },
+  {
+    "id": "is-this-a-pigeon",
+    "name": "Is This a Pigeon?",
+    "createdYear": 2011,
+    "peakYear": 2018,
+    "category": "reaction",
+    "originPlatform": "Tumblr",
+    "description": "An anime android misidentifying a butterfly, dormant for years before exploding into the template for confident wrongness.",
+    "status": "dormant",
+    "relatedMemes": [
+      "mocking-spongebob",
+      "expanding-brain"
+    ],
+    "popularity": [
+      {
+        "year": 2011,
+        "score": 10
+      },
+      {
+        "year": 2018,
+        "score": 78
+      },
+      {
+        "year": 2020,
+        "score": 30
+      },
+      {
+        "year": 2026,
+        "score": 10
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Is This a Pigeon? meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/is-this-a-pigeon"
+    }
+  },
+  {
+    "id": "among-us",
+    "name": "Among Us",
+    "createdYear": 2018,
+    "peakYear": 2020,
+    "category": "gaming",
+    "originPlatform": "Twitch / TikTok",
+    "description": "A 2018 indie game that lockdown turned into a global ritual of accusation. 'Sus' entered the dictionary; the crewmate shape entered everything.",
+    "status": "dormant",
+    "relatedMemes": [
+      "leeroy-jenkins",
+      "skibidi-toilet"
+    ],
+    "popularity": [
+      {
+        "year": 2018,
+        "score": 5
+      },
+      {
+        "year": 2020,
+        "score": 92
+      },
+      {
+        "year": 2022,
+        "score": 40
+      },
+      {
+        "year": 2026,
+        "score": 15
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/among-us/original.jpg",
+      "localGif": "",
+      "giphySearchTerm": "Among Us meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Among_Us",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/among-us"
+    }
+  },
+  {
+    "id": "bernie-mittens",
+    "name": "Bernie's Mittens",
+    "createdYear": 2021,
+    "peakYear": 2021,
+    "category": "photo",
+    "originPlatform": "Twitter",
+    "description": "Bernie Sanders, folding chair, enormous mittens, inauguration day. Photoshopped into every scene in history within 48 hours.",
+    "status": "extinct",
+    "relatedMemes": [
+      "girl-explaining"
+    ],
+    "popularity": [
+      {
+        "year": 2021,
+        "score": 88
+      },
+      {
+        "year": 2022,
+        "score": 12
+      },
+      {
+        "year": 2026,
+        "score": 3
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Bernie's Mittens meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/bernie-sanders-wearing-mittens-sitting-in-a-chair"
+    }
+  },
+  {
+    "id": "girl-explaining",
+    "name": "Girl Explaining",
+    "createdYear": 2021,
+    "peakYear": 2022,
+    "category": "reaction",
+    "originPlatform": "Twitter",
+    "description": "A girl mid-festival, passionately explaining something to a boy who is not listening. The internet supplied the dialogue.",
+    "status": "active",
+    "relatedMemes": [
+      "bernie-mittens",
+      "woman-yelling-at-cat"
+    ],
+    "popularity": [
+      {
+        "year": 2021,
+        "score": 30
+      },
+      {
+        "year": 2022,
+        "score": 70
+      },
+      {
+        "year": 2024,
+        "score": 35
+      },
+      {
+        "year": 2026,
+        "score": 20
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "Girl Explaining meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/girl-explaining"
+    }
+  },
+  {
+    "id": "skibidi-toilet",
+    "name": "Skibidi Toilet",
+    "createdYear": 2023,
+    "peakYear": 2024,
+    "category": "video",
+    "originPlatform": "YouTube Shorts",
+    "description": "A Source-engine saga of singing toilet heads versus camera-headed agents. Incomprehensible to anyone over 14; a cinematic universe to everyone under.",
+    "status": "active",
+    "relatedMemes": [
+      "among-us",
+      "ai-memes"
+    ],
+    "popularity": [
+      {
+        "year": 2023,
+        "score": 75
+      },
+      {
+        "year": 2024,
+        "score": 85
+      },
+      {
+        "year": 2026,
+        "score": 45
+      }
+    ],
+    "asset": {
+      "localImage": "/memes/skibidi-toilet/original.webp",
+      "localGif": "",
+      "giphySearchTerm": "Skibidi Toilet meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "Skibidi_Toilet",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/skibidi-toilet"
+    }
+  },
+  {
+    "id": "ai-memes",
+    "name": "AI Memes",
+    "createdYear": 2022,
+    "peakYear": 2025,
+    "category": "ai",
+    "originPlatform": "Everywhere at once",
+    "description": "Shrimp Jesus, cursed generations, deep-fried diffusion dreams. The first memes not entirely made by humans — the newest stratum, still forming.",
+    "status": "active",
+    "relatedMemes": [
+      "skibidi-toilet",
+      "npc-wojak"
+    ],
+    "popularity": [
+      {
+        "year": 2022,
+        "score": 25
+      },
+      {
+        "year": 2023,
+        "score": 55
+      },
+      {
+        "year": 2025,
+        "score": 85
+      },
+      {
+        "year": 2026,
+        "score": 88
+      }
+    ],
+    "asset": {
+      "localImage": "",
+      "localGif": "",
+      "giphySearchTerm": "AI Memes meme",
+      "youtubeVideoId": "",
+      "wikipediaPage": "",
+      "knowYourMemeUrl": "https://knowyourmeme.com/memes/cultures/ai-generated-content"
+    }
+  }
+]
