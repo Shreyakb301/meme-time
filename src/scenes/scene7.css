@@ -1,0 +1,192 @@
+/* ============================================================
+   SCENE 7 — VIRAL SPREAD SIMULATOR
+   Dark platform archipelago, cyan outbreak.
+   ============================================================ */
+
+.s7-map {
+  background:
+    radial-gradient(50% 45% at 55% 50%, rgba(0, 229, 255, 0.05), transparent 70%),
+    #03060e;
+}
+
+.s7-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+.s7-note {
+  position: absolute;
+  right: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+/* ---------- Routes ---------- */
+
+.s7-routes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.s7-route {
+  stroke: rgba(148, 163, 184, 0.16);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.5s var(--ease-out);
+}
+
+.s7-route.is-live {
+  stroke: rgba(0, 229, 255, 0.8);
+  stroke-width: 1.6px;
+  stroke-dasharray: 6 5;
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.7));
+  animation: s7-flow 0.8s linear infinite;
+}
+
+@keyframes s7-flow {
+  to { stroke-dashoffset: -11; }
+}
+
+/* ---------- Islands ---------- */
+
+.s7-island {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.s7-island__pad {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line-soft);
+  background: radial-gradient(circle, rgba(16, 24, 39, 0.95), rgba(8, 12, 22, 0.95));
+  transition: all 0.4s var(--ease-out);
+}
+
+.s7-island__label {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+.s7-island.is-origin .s7-island__pad {
+  border-color: rgba(255, 77, 141, 0.6);
+}
+
+.s7-island.is-live .s7-island__pad {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.5), inset 0 0 12px rgba(0, 229, 255, 0.4);
+  animation: s7-pulse 1.6s ease-in-out infinite;
+}
+
+.s7-island.is-live .s7-island__label {
+  color: var(--accent-cyan);
+}
+
+@keyframes s7-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* ---------- Control bench ---------- */
+
+.s7-bench {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 8%;
+  z-index: 5;
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(8, 12, 22, 0.85);
+  border: 1px solid var(--line-faint);
+  border-left: 3px solid var(--era-accent);
+}
+
+.s7-bench__subjects {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.s7-slide {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--line-faint);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-low);
+  cursor: pointer;
+}
+
+.s7-slide.is-active {
+  border-color: var(--era-accent);
+  color: var(--text-hi);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.2);
+}
+
+.s7-slide__img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+}
+
+.s7-release {
+  padding: 12px;
+  background: var(--era-accent);
+  color: var(--bg-void);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  cursor: pointer;
+  transition: box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.s7-release:hover:not(:disabled) {
+  box-shadow: var(--glow-era);
+}
+
+.s7-release:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.s7-readout {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  color: var(--text-low);
+}
+
+.s7-readout b {
+  color: var(--era-accent);
+}
+
+.s7-reset {
+  margin-left: auto;
+  text-decoration: underline;
+  color: var(--text-low);
+  cursor: pointer;
+  font-size: var(--type-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 760px) {
+  .s7-bench { right: var(--gutter); }
+}

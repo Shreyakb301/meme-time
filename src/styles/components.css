@@ -1,0 +1,531 @@
+/* ============================================================
+   MEMETIME — Component styles
+   Museum-installation vocabulary: environments, lighting,
+   atmosphere, plaques. No cards, no glass, no marketing grids.
+   ============================================================ */
+
+/* ============================================================
+   ENVIRONMENTS — every scene is a room, not a section.
+   An environment owns its own floor, lighting, and air.
+   ============================================================ */
+
+.env {
+  position: relative;
+  min-height: 100svh;
+  overflow: clip;
+  isolation: isolate; /* lighting must never leak into the next room */
+  z-index: var(--z-scene);
+}
+
+/* The stage is the full-bleed composition surface. Content is
+   placed absolutely or via grid areas — never auto-stacked. */
+.env__stage {
+  position: relative;
+  z-index: var(--z-content);
+  min-height: 100svh;
+  padding: var(--space-scene) var(--gutter);
+  display: grid;
+}
+
+/* Composition presets — rooms choose one, then break the rules */
+.env__stage--corner-tl { align-content: start; justify-items: start; }
+.env__stage--corner-br { align-content: end; justify-items: end; text-align: right; }
+.env__stage--floor     { align-content: end; justify-items: start; }
+.env__stage--center    { align-content: center; justify-items: center; text-align: center; }
+.env__stage--split {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: end;
+  gap: var(--space-12);
+}
+
+@media (max-width: 768px) {
+  .env__stage--split {
+    grid-template-columns: 1fr;
+    align-content: end;
+  }
+}
+
+/* ============================================================
+   PINNED SEQUENCE — sticky storytelling. The room holds still
+   while the story moves through it.
+   ============================================================ */
+
+.pinned {
+  position: relative;
+}
+
+.pinned__viewport {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: clip;
+  isolation: isolate;
+  display: grid;
+}
+
+/* ============================================================
+   HORIZONTAL CORRIDOR — a gallery you walk along sideways.
+   ============================================================ */
+
+.corridor__track {
+  display: flex;
+  align-items: stretch;
+  height: 100svh;
+  width: max-content;
+  will-change: transform;
+}
+
+.corridor__bay {
+  position: relative;
+  flex: none;
+  width: min(80vw, 60rem);
+  display: grid;
+  align-content: center;
+  padding: var(--space-scene) var(--gutter);
+  border-left: 1px solid var(--line-faint);
+}
+
+/* ============================================================
+   PARALLAX
+   ============================================================ */
+
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ============================================================
+   LIGHTING — museum lighting, not gradient decoration.
+   All lighting lives behind content and tints via --era-accent.
+   ============================================================ */
+
+/* Angled beam, like a skylight hitting an artifact */
+.light-shaft {
+  position: absolute;
+  top: -20%;
+  width: clamp(8rem, 18vw, 18rem);
+  height: 140%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--era-accent) 22%, transparent),
+    color-mix(in srgb, var(--era-accent) 5%, transparent) 55%,
+    transparent
+  );
+  clip-path: polygon(35% 0, 65% 0, 100% 100%, 0% 100%);
+  transform: rotate(var(--shaft-angle, -8deg));
+  filter: blur(6px);
+  mix-blend-mode: screen;
+}
+
+/* Pool of light on the floor beneath an exhibit */
+.light-pool {
+  position: absolute;
+  bottom: 4%;
+  width: clamp(16rem, 40vw, 36rem);
+  aspect-ratio: 5 / 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--era-accent) 18%, transparent),
+    transparent 70%
+  );
+  filter: blur(8px);
+}
+
+/* Darkness pressing in at the edges — every room gets one */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 120% 90% at 50% 45%,
+    transparent 55%,
+    rgba(5, 8, 22, 0.85)
+  );
+}
+
+/* Low fog along the floor of a room */
+.floor-fog {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 32%;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--bg-void), transparent);
+}
+
+/* ============================================================
+   ARCHAEOLOGY SURFACES
+   ============================================================ */
+
+/* Perspective wireframe floor — the dig site */
+.grid-floor {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--era-accent) 28%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--era-accent) 28%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(420px) rotateX(62deg);
+  transform-origin: top;
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+}
+
+/* CRT scanlines — for rooms set in older strata */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
+}
+
+/* Film grain over everything — documentary texture */
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+}
+
+/* ============================================================
+   PLAQUES — museum labels. The only "container" in the system,
+   and it is a wall label, not a card: rule + mono text, no box.
+   ============================================================ */
+
+.plaque {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 26rem;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--era-accent);
+}
+
+.plaque__id {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--era-accent);
+}
+
+.plaque__title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-hi);
+}
+
+.plaque__body {
+  font-size: var(--type-label);
+  color: var(--text-low);
+}
+
+/* Free-floating mono annotation, pinned anywhere on the stage */
+.field-note {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+.field-note::before {
+  content: '▸ ';
+  color: var(--era-accent);
+}
+
+/* ============================================================
+   CHROME — expedition instruments, fixed over everything.
+   ============================================================ */
+
+.wordmark {
+  position: fixed;
+  top: var(--space-6);
+  left: var(--gutter);
+  z-index: var(--z-chrome);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-hi);
+  mix-blend-mode: difference;
+}
+
+/* Depth gauge — how deep into the strata you've scrolled */
+.depth-rail {
+  position: fixed;
+  top: 50%;
+  right: clamp(0.75rem, 2vw, 2rem);
+  transform: translateY(-50%);
+  z-index: var(--z-chrome);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.depth-rail__track {
+  position: relative;
+  width: 2px;
+  height: 38vh;
+  background: var(--line-faint);
+  overflow: hidden;
+}
+
+.depth-rail__fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--primary),
+    var(--accent-cyan),
+    var(--secondary),
+    var(--accent-pink)
+  );
+  transform-origin: top;
+}
+
+.depth-rail__readout {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-low);
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 640px) {
+  .depth-rail {
+    display: none;
+  }
+}
+
+/* ============================================================
+   PIXEL SPRITES — box-shadow pixel art flipping like a 2-frame
+   GIF. Under reduced motion the animation ends after one pass
+   and only the first frame (base opacity 1) stays visible.
+   ============================================================ */
+
+.px-sprite {
+  position: relative;
+}
+
+.px-sprite__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: transparent;
+  opacity: 0;
+  animation: px-flip var(--px-dur, 1s) steps(1) infinite;
+}
+
+.px-sprite__frame:first-child {
+  opacity: 1;
+}
+
+@keyframes px-flip {
+  0%, 49.99% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ============================================================
+   EXHIBITS — clickable artifacts + the examination modal
+   ============================================================ */
+
+.exhibit {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.exhibit:hover .exhibit__img {
+  filter: brightness(1.08);
+}
+
+.exhibit__img {
+  transition: filter var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.exhibit:hover .exhibit__img {
+  transform: translateY(-3px);
+}
+
+.exhibit-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+.exhibit-tag::before {
+  content: '▸ ';
+  color: var(--era-accent);
+}
+
+.amodal {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-overlay) + 10);
+  display: grid;
+  place-items: center;
+  padding: var(--gutter);
+  background: rgba(3, 5, 12, 0.86);
+}
+
+.amodal__plate {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-8);
+  width: min(58rem, 100%);
+  max-height: 85svh;
+  overflow-y: auto;
+  padding: var(--space-8);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-faint);
+  border-left: 3px solid var(--era-accent);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
+}
+
+.amodal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  color: var(--text-low);
+  border: 1px solid var(--line-soft);
+}
+
+.amodal__close:hover {
+  color: var(--text-hi);
+  border-color: var(--era-accent);
+}
+
+.amodal__media {
+  display: grid;
+  place-items: center;
+  min-height: 14rem;
+  background: var(--bg-void);
+  border: 1px solid var(--line-faint);
+  padding: var(--space-4);
+}
+
+.amodal__media img {
+  max-height: 20rem;
+  filter: brightness(0.98);
+}
+
+.amodal__noimg {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-low);
+}
+
+.amodal__info {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.amodal__id {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--era-accent);
+}
+
+.amodal__name {
+  font-size: var(--type-title);
+}
+
+.amodal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  color: var(--text-low);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.amodal__meta [data-status] {
+  color: var(--era-accent);
+}
+
+.amodal__desc {
+  color: var(--text-mid);
+}
+
+.amodal__loading {
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  color: var(--text-low);
+  animation: s1-hint 1.6s ease-in-out infinite;
+}
+
+.amodal__wiki {
+  font-size: var(--type-label);
+  color: var(--text-low);
+  border-left: 1px solid var(--line-soft);
+  padding-left: var(--space-3);
+}
+
+.amodal__refs {
+  display: flex;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+}
+
+.amodal__refs a {
+  color: var(--era-accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--era-accent) 40%, transparent);
+}
+
+@media (max-width: 700px) {
+  .amodal__plate {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   STRATA NUMERALS — giant era markers, half-buried in the dark
+   ============================================================ */
+
+.stratum-numeral {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(10rem, 32vw, 30rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--era-accent) 35%, transparent);
+  pointer-events: none;
+  user-select: none;
+  z-index: var(--z-below);
+}

@@ -1,0 +1,199 @@
+/* ============================================================
+   SCENE 12 — INTERNET CULTURE SKYLINE · finale
+   The archive becomes a city. Lime dawn over meme architecture.
+   ============================================================ */
+
+.s12-sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #02030a 0%, #060818 45%, #0b1020 100%);
+}
+
+.s12-dawn {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 50% at 50% 90%, rgba(215, 255, 63, 0.12), transparent 70%);
+}
+
+/* ---------- The city ---------- */
+
+.s12-city {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(14px, 2.6vw, 42px);
+  padding-inline: var(--gutter);
+  will-change: transform;
+}
+
+.s12-district {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.s12-buildings {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.s12-tower {
+  position: relative;
+  width: clamp(26px, 3vw, 44px);
+  background:
+    repeating-linear-gradient(
+      to top,
+      rgba(215, 255, 63, 0.16) 0 3px,
+      transparent 3px 9px
+    ),
+    linear-gradient(to top, #131a2c, #0d1322);
+  border: 1px solid rgba(215, 255, 63, 0.18);
+  border-bottom: 0;
+  cursor: pointer;
+  transition: box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.s12-tower:hover {
+  border-color: rgba(215, 255, 63, 0.7);
+  box-shadow: 0 0 30px rgba(215, 255, 63, 0.3);
+}
+
+.s12-tower.is-landmark {
+  border-color: rgba(215, 255, 63, 0.45);
+  box-shadow: 0 0 24px rgba(215, 255, 63, 0.18);
+}
+
+.s12-tower.is-landmark::after {
+  /* antenna beacon */
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background: rgba(215, 255, 63, 0.6);
+}
+
+.s12-tower.is-landmark::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-44%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: s3-node-pulse 2.2s ease-in-out infinite;
+}
+
+.s12-tower__crown {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--primary);
+  text-shadow: 0 0 12px rgba(215, 255, 63, 0.5);
+}
+
+/* building name on hover, projected at the base */
+.s12-tower__name {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-low);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-out);
+  pointer-events: none;
+}
+
+.s12-tower:hover .s12-tower__name {
+  opacity: 1;
+}
+
+.s12-district__name {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+/* ---------- Fog & finale ---------- */
+
+.s12-fog {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(to top, #060512 30%, rgba(6, 5, 18, 0.7) 60%, transparent);
+}
+
+.s12-finale {
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  width: min(46rem, 90vw);
+}
+
+.s12-finale__line {
+  font-family: var(--font-display);
+  font-size: var(--type-title);
+  font-weight: 700;
+  color: var(--text-hi);
+  text-wrap: balance;
+}
+
+.s12-finale__line span {
+  color: var(--primary);
+  text-shadow: 0 0 24px rgba(215, 255, 63, 0.45);
+}
+
+.s12-again {
+  padding: 12px 26px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  cursor: pointer;
+  transition: box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.s12-again:hover {
+  background: rgba(215, 255, 63, 0.1);
+  box-shadow: var(--glow-primary);
+}
+
+.s12-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+@media (max-width: 900px) {
+  .s12-city { flex-wrap: wrap; row-gap: 40px; }
+}

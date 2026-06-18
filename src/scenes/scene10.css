@@ -1,0 +1,143 @@
+/* ============================================================
+   SCENE 10 — HALL V · The Fast Internet (2020–2026)
+   Vertical feeds, scan beams, deliberate overload.
+   ============================================================ */
+
+.s10-hall {
+  background:
+    radial-gradient(40% 50% at 80% 30%, rgba(255, 77, 141, 0.07), transparent 70%),
+    radial-gradient(40% 50% at 20% 70%, rgba(0, 229, 255, 0.07), transparent 70%),
+    #04060e;
+  animation: s10-jitter 7s steps(1) infinite;
+}
+
+@keyframes s10-jitter {
+  0%, 100% { filter: none; }
+  31% { filter: hue-rotate(12deg) brightness(1.06); }
+  32% { filter: none; }
+  74% { filter: hue-rotate(-10deg); }
+  75% { filter: none; }
+}
+
+/* sweeping recommendation beam */
+.s10-scan {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(0, 229, 255, 0.06) 48%,
+    rgba(0, 229, 255, 0.12) 50%,
+    rgba(0, 229, 255, 0.06) 52%,
+    transparent 100%
+  );
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  animation: s10-sweep 5s linear infinite;
+}
+
+@keyframes s10-sweep {
+  from { background-position: 0 -60%; }
+  to { background-position: 0 160%; }
+}
+
+/* ---------- The feeds ---------- */
+
+.s10-feeds {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 40px);
+  padding-inline: var(--gutter);
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+}
+
+.s10-col {
+  width: clamp(150px, 18vw, 230px);
+  overflow: hidden;
+}
+
+.s10-col__track {
+  display: grid;
+  animation: s10-scroll var(--feed-speed, 12s) linear infinite;
+}
+
+.s10-col:nth-child(2) .s10-col__track {
+  animation-direction: reverse;
+}
+
+@keyframes s10-scroll {
+  to { transform: translateY(-50%); }
+}
+
+.s10-col__set {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 14px;
+}
+
+/* ---------- Tiles ---------- */
+
+.s10-tile {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  background: rgba(10, 14, 26, 0.9);
+  border: 1px solid var(--line-faint);
+}
+
+.s10-tile__img {
+  width: 100%;
+  aspect-ratio: 9 / 12;
+  object-fit: cover;
+  filter: saturate(1.1);
+}
+
+.s10-tile__meta {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-low);
+}
+
+.s10-tile--text {
+  aspect-ratio: 9 / 7;
+  place-content: center;
+  text-align: center;
+}
+
+.s10-tile--text .s10-tile__text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+  color: var(--text-mid);
+}
+
+.s10-tile--text.is-cyan .s10-tile__text { color: var(--accent-cyan); text-shadow: 0 0 14px rgba(0, 229, 255, 0.4); }
+.s10-tile--text.is-pink .s10-tile__text { color: var(--accent-pink); text-shadow: 0 0 14px rgba(255, 77, 141, 0.4); }
+
+/* ---------- Labels ---------- */
+
+.s10-plaque {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 8%;
+  z-index: 5;
+}
+
+.s10-note {
+  position: absolute;
+  right: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+@media (max-width: 760px) {
+  .s10-col:nth-child(3) { display: none; }
+  .s10-plaque { bottom: auto; top: var(--space-scene); }
+}

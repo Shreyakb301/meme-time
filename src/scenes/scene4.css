@@ -1,0 +1,175 @@
+/* ============================================================
+   SCENE 4 — HALL III · The Meme Boom (2010–2014)
+   Loud. Pink light, rainbow trails, glitches, periodic quakes.
+   ============================================================ */
+
+.s4-room {
+  position: absolute;
+  inset: 0;
+  animation: s4-quake 12s ease-in-out infinite;
+}
+
+@keyframes s4-quake {
+  0%, 88%, 100% { transform: translate(0, 0); }
+  89% { transform: translate(7px, -5px) rotate(0.4deg); }
+  91% { transform: translate(-8px, 4px) rotate(-0.3deg); }
+  93% { transform: translate(5px, 3px) rotate(0.2deg); }
+  95% { transform: translate(-3px, -2px); }
+  97% { transform: translate(2px, 1px); }
+}
+
+.s4-air {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 50% at 50% 40%, rgba(255, 77, 141, 0.1), transparent 70%),
+    radial-gradient(40% 30% at 20% 80%, rgba(0, 229, 255, 0.06), transparent 70%),
+    linear-gradient(to bottom, #070510 0%, #100a1c 60%, #131027 100%);
+}
+
+.s4-artifact {
+  position: absolute;
+  z-index: 2;
+  will-change: transform;
+}
+
+.s4-frame {
+  width: clamp(120px, 13vw, 180px);
+  border: 1px solid var(--line-soft);
+  filter: brightness(0.94);
+  box-shadow: 0 0 36px rgba(255, 77, 141, 0.18);
+}
+
+.s4-frame--wide {
+  width: clamp(170px, 19vw, 250px);
+}
+
+.s4-quake-tag {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+}
+
+/* ---------- Trollface: glitches in and out ---------- */
+
+.s4-troll {
+  width: clamp(110px, 11vw, 150px);
+  background: #fff;
+  animation: s4-glitch 6s steps(1) infinite;
+}
+
+@keyframes s4-glitch {
+  0%, 100% { filter: none; transform: none; clip-path: none; }
+  7% { filter: hue-rotate(90deg); transform: translateX(4px) skewX(4deg); clip-path: inset(12% 0 30% 0); }
+  8% { filter: none; transform: none; clip-path: none; }
+  9% { filter: invert(1); transform: translateX(-5px); clip-path: inset(55% 0 8% 0); }
+  10% { filter: none; transform: none; clip-path: none; }
+  54% { filter: hue-rotate(-60deg); transform: translate(3px, -2px) skewX(-5deg); clip-path: inset(0 20% 0 0); }
+  56% { filter: none; transform: none; clip-path: none; }
+}
+
+/* ---------- Nyan Cat: rainbow transit ---------- */
+
+.s4-nyan {
+  position: absolute;
+  top: 24%;
+  left: -60vw;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  animation: s4-fly 9s linear infinite;
+}
+
+.s4-nyan .exhibit {
+  pointer-events: auto;
+}
+
+.s4-nyan__trail {
+  width: 44vw;
+  height: 36px;
+  background: linear-gradient(
+    to bottom,
+    #ff3355 0 6px,
+    #ff9933 6px 12px,
+    #ffee33 12px 18px,
+    #33ff66 18px 24px,
+    #3399ff 24px 30px,
+    #9933ff 30px 36px
+  );
+  opacity: 0.75;
+  mask-image: linear-gradient(to left, black, transparent);
+  -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
+
+.s4-nyan__img {
+  width: 76px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+}
+
+@keyframes s4-fly {
+  to { transform: translateX(220vw); }
+}
+
+/* ---------- The celestial Doge ---------- */
+
+.s4-doge {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  will-change: transform, filter;
+}
+
+.s4-doge__rays {
+  position: absolute;
+  inset: -45%;
+  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 14deg,
+    rgba(215, 255, 63, 0.08) 14deg 18deg,
+    transparent 18deg 32deg,
+    rgba(255, 77, 141, 0.07) 32deg 36deg,
+    transparent 36deg 50deg
+  );
+  border-radius: 50%;
+  animation: s4-rays 26s linear infinite;
+}
+
+@keyframes s4-rays {
+  to { transform: rotate(360deg); }
+}
+
+.s4-doge__img {
+  width: clamp(150px, 17vw, 230px);
+  border-radius: 50%;
+  border: 2px solid rgba(215, 255, 63, 0.4);
+  box-shadow: 0 0 60px rgba(215, 255, 63, 0.3);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.s4-doge__wow {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 1.3rem;
+  color: var(--primary);
+  text-shadow: 0 0 18px rgba(215, 255, 63, 0.5);
+  animation: s3-node-pulse 2.8s ease-in-out infinite;
+}
+
+.s4-plaque {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 10%;
+  z-index: 4;
+}
+
+@media (max-width: 760px) {
+  .s4-plaque { bottom: auto; top: var(--space-scene); }
+}

@@ -1,0 +1,153 @@
+/* ============================================================
+   MEMETIME — Base styles
+   Resets, typography defaults, and the shared scene vocabulary.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-mid);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg,
+canvas,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--era-accent);
+  color: var(--bg-void);
+}
+
+:focus-visible {
+  outline: 2px solid var(--era-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Typography vocabulary ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--text-hi);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.t-giant {
+  font-size: var(--type-giant);
+  line-height: var(--leading-tight);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.t-display {
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.t-title {
+  font-size: var(--type-title);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+
+.t-lead {
+  font-size: var(--type-lead);
+  line-height: 1.55;
+  color: var(--text-mid);
+  max-width: var(--reading-max);
+  text-wrap: pretty;
+}
+
+.t-body {
+  color: var(--text-low);
+  max-width: var(--reading-max);
+}
+
+.t-accent {
+  color: var(--era-accent);
+}
+
+.t-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-low);
+}
+
+/* ---------- Scrollbar (subtle, on-theme) ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--bg-void);
+}
+
+/* ---------- Reduced motion: ambience off, story intact ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

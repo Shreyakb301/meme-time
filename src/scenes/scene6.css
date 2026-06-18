@@ -1,0 +1,122 @@
+/* ============================================================
+   SCENE 6 — MEME EVOLUTION LAB
+   A dark bench, lime DNA, zoomable genealogy.
+   ============================================================ */
+
+.s6-lab {
+  background:
+    radial-gradient(60% 50% at 50% 30%, rgba(215, 255, 63, 0.05), transparent 70%),
+    #04060d;
+}
+
+.s6-lab .vignette,
+.s6-lab canvas {
+  pointer-events: none;
+}
+
+.s6-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.s6-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.s6-note {
+  position: absolute;
+  right: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+/* ---------- Specimen nodes ---------- */
+
+.s6-node {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 110px;
+  padding: 10px 8px;
+  background: rgba(8, 12, 22, 0.92);
+  border: 1px solid rgba(215, 255, 63, 0.25);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.s6-node:hover {
+  border-color: rgba(215, 255, 63, 0.7);
+  box-shadow: 0 0 28px rgba(215, 255, 63, 0.2);
+}
+
+.s6-node__img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  filter: brightness(0.95);
+}
+
+.s6-node__noimg {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-surface);
+  font-family: var(--font-mono);
+  color: var(--text-low);
+}
+
+.s6-node__name {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-hi);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.s6-node__year {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--era-accent);
+}
+
+.s6-handle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- Flow chrome overrides: lab, not diagram tool ---------- */
+
+.s6-lab .react-flow {
+  background: transparent;
+}
+
+.s6-lab .react-flow__edge-path {
+  stroke: rgba(215, 255, 63, 0.45);
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 4px rgba(215, 255, 63, 0.4));
+}
+
+.s6-lab .react-flow__controls {
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.s6-lab .react-flow__controls-button {
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--line-faint);
+  fill: var(--text-mid);
+}
+
+.s6-lab .react-flow__controls-button:hover {
+  background: var(--bg-surface);
+}

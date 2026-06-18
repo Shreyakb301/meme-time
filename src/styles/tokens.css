@@ -1,0 +1,135 @@
+/* ============================================================
+   MEMETIME — Design Tokens
+   The single source of truth. Components never hard-code
+   colors, type, motion, or depth — they read from here.
+   ============================================================ */
+
+:root {
+  /* ---------- Color · Backgrounds (depth ladder) ---------- */
+  --bg-void: #050816;      /* deepest layer — the page itself */
+  --bg-deep: #0b1020;      /* scene backdrops */
+  --bg-surface: #101827;   /* raised surfaces, panels */
+
+  /* ---------- Color · Brand ---------- */
+  --primary: #d7ff3f;      /* acid lime — headlines, key moments */
+  --secondary: #9f7aea;    /* violet — secondary emphasis */
+  --accent-cyan: #00e5ff;
+  --accent-pink: #ff4d8d;
+
+  /* ---------- Color · Text ---------- */
+  --text-hi: #ffffff;
+  --text-mid: #d1d5db;
+  --text-low: #94a3b8;
+
+  /* ---------- Color · Lines & fills ---------- */
+  --line-faint: rgba(148, 163, 184, 0.12);
+  --line-soft: rgba(148, 163, 184, 0.24);
+  --fill-glass: rgba(16, 24, 39, 0.55);
+
+  /* ---------- Era accent ----------
+     Every scene declares a mood via data-mood. Components that
+     want to "tint with the current era" use --era-accent and
+     get retinted automatically as the story moves through time. */
+  --era-accent: var(--primary);
+  --era-accent-soft: rgba(215, 255, 63, 0.14);
+
+  /* ---------- Typography (served via next/font) ---------- */
+  --font-display: var(--font-grotesk), 'Space Grotesk', system-ui, sans-serif;
+  --font-body: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Fluid type scale — cinematic at desktop, sane on mobile */
+  --type-giant: clamp(3.5rem, 12vw, 11rem);     /* scene titles */
+  --type-display: clamp(2.5rem, 7vw, 5.5rem);   /* section headlines */
+  --type-title: clamp(1.75rem, 4vw, 3rem);      /* sub-headlines */
+  --type-lead: clamp(1.125rem, 1.8vw, 1.375rem);/* lead paragraphs */
+  --type-body: 1rem;
+  --type-label: 0.8125rem;                      /* mono labels */
+  --type-micro: 0.6875rem;                      /* fine print, coords */
+
+  --leading-tight: 0.95;
+  --leading-snug: 1.15;
+  --leading-body: 1.65;
+  --tracking-label: 0.18em;
+  --tracking-wide: 0.32em;
+
+  /* ---------- Space (4px base, jumps get bigger up the scale) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-scene: clamp(5rem, 12vh, 10rem);      /* breathing room inside scenes */
+
+  /* ---------- Layout ---------- */
+  --content-max: 72rem;
+  --reading-max: 42rem;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 999px;
+
+  /* ---------- Glow (soft, never neon-blowout) ---------- */
+  --glow-primary: 0 0 24px rgba(215, 255, 63, 0.35), 0 0 80px rgba(215, 255, 63, 0.12);
+  --glow-cyan: 0 0 24px rgba(0, 229, 255, 0.35), 0 0 80px rgba(0, 229, 255, 0.12);
+  --glow-violet: 0 0 24px rgba(159, 122, 234, 0.35), 0 0 80px rgba(159, 122, 234, 0.12);
+  --glow-pink: 0 0 24px rgba(255, 77, 141, 0.35), 0 0 80px rgba(255, 77, 141, 0.12);
+  --glow-era: 0 0 24px color-mix(in srgb, var(--era-accent) 35%, transparent),
+              0 0 80px color-mix(in srgb, var(--era-accent) 12%, transparent);
+
+  /* ---------- Motion ----------
+     Durations are short for micro-interactions (ADHD-friendly:
+     feedback is instant), longer only for ambient drift. */
+  --dur-instant: 120ms;
+  --dur-fast: 240ms;
+  --dur-base: 420ms;
+  --dur-slow: 800ms;
+  --dur-ambient: 12s;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);        /* default — snappy settle */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* playful overshoot */
+
+  /* ---------- Z ladder ---------- */
+  --z-below: -1;
+  --z-scene: 1;
+  --z-content: 10;
+  --z-chrome: 100;   /* progress rail, wordmark */
+  --z-overlay: 1000; /* noise, transitions */
+}
+
+/* ============================================================
+   Era moods — each scene sets data-mood and the whole subtree
+   (labels, glows, particles, rules) retints itself.
+   ============================================================ */
+
+[data-mood='lime'] {
+  --era-accent: var(--primary);
+  --era-accent-soft: rgba(215, 255, 63, 0.14);
+  --glow-era: var(--glow-primary);
+}
+
+[data-mood='violet'] {
+  --era-accent: var(--secondary);
+  --era-accent-soft: rgba(159, 122, 234, 0.16);
+  --glow-era: var(--glow-violet);
+}
+
+[data-mood='cyan'] {
+  --era-accent: var(--accent-cyan);
+  --era-accent-soft: rgba(0, 229, 255, 0.14);
+  --glow-era: var(--glow-cyan);
+}
+
+[data-mood='pink'] {
+  --era-accent: var(--accent-pink);
+  --era-accent-soft: rgba(255, 77, 141, 0.15);
+  --glow-era: var(--glow-pink);
+}

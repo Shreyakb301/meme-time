@@ -1,0 +1,152 @@
+/* ============================================================
+   SCENE 11 — THE MEME GRAVEYARD
+   Pixel sand, soft violet stones, occasional ghosts.
+   ============================================================ */
+
+.s11-yard {
+  background:
+    radial-gradient(45% 35% at 70% 22%, rgba(159, 122, 234, 0.09), transparent 70%),
+    linear-gradient(to bottom, #030309 0%, #08071a 60%, #0b0a20 100%);
+}
+
+.s11-moon {
+  position: absolute;
+  top: 12%;
+  right: 18%;
+  width: clamp(60px, 7vw, 100px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%, #cfd6e4, #8b93ad 70%);
+  box-shadow: 0 0 60px rgba(159, 122, 234, 0.35);
+  opacity: 0.8;
+}
+
+/* ---------- Stones ---------- */
+
+.s11-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(10px, 3vw, 44px);
+  padding-inline: var(--gutter);
+}
+
+.s11-grave {
+  display: grid;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.s11-stone {
+  display: grid;
+  gap: 4px;
+  width: clamp(110px, 12vw, 160px);
+  padding: 18px 12px 14px;
+  text-align: center;
+  background: linear-gradient(#181a2c, #101222);
+  border: 1px solid rgba(159, 122, 234, 0.25);
+  border-radius: 50% 50% 4px 4px / 28% 28% 4px 4px;
+  box-shadow: 0 0 24px rgba(159, 122, 234, 0.12);
+  transition: box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.s11-grave:hover .s11-stone {
+  box-shadow: 0 0 44px rgba(159, 122, 234, 0.35);
+  transform: translateY(-4px);
+}
+
+.s11-stone b {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.25;
+}
+
+.s11-stone i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--era-accent);
+}
+
+.s11-stone em {
+  font-style: italic;
+  font-size: 10px;
+  color: var(--text-low);
+}
+
+.s11-mound {
+  width: 130%;
+  height: 12px;
+  margin-top: -2px;
+  background: #0d0c1e;
+  border-radius: 50%;
+}
+
+/* ---------- Pixel sand ---------- */
+
+.s11-sand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 17%;
+  z-index: 1;
+  background:
+    repeating-conic-gradient(rgba(159, 122, 234, 0.06) 0 25%, transparent 0 50%) 0 0 / 8px 8px,
+    linear-gradient(to bottom, #0a0918, #060512);
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%);
+}
+
+/* ---------- Ghosts ---------- */
+
+.s11-ghost {
+  position: absolute;
+  bottom: 18%;
+  z-index: 1;
+  width: clamp(90px, 9vw, 130px);
+  pointer-events: none;
+  opacity: 0;
+  filter: grayscale(1) brightness(1.6) blur(1.5px);
+  animation: s11-haunt 18s ease-in-out infinite;
+}
+
+.s11-ghost img {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent);
+}
+
+@keyframes s11-haunt {
+  0%, 78%, 100% { opacity: 0; transform: translateY(0); }
+  82% { opacity: 0.16; }
+  92% { opacity: 0.12; transform: translateY(-26vh) translateX(3vw); }
+  97% { opacity: 0; transform: translateY(-34vh) translateX(4vw); }
+}
+
+/* ---------- Labels ---------- */
+
+.s11-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+.s11-note {
+  position: absolute;
+  right: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+@media (max-width: 760px) {
+  .s11-row { flex-wrap: wrap; }
+}

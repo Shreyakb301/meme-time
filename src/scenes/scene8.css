@@ -1,0 +1,167 @@
+/* ============================================================
+   SCENE 8 — POPULARITY LANDSCAPE
+   A violet mountain range under fog. Height = attention.
+   ============================================================ */
+
+.s8-land {
+  background:
+    radial-gradient(60% 40% at 50% 20%, rgba(159, 122, 234, 0.07), transparent 70%),
+    linear-gradient(to bottom, #04050e 0%, #0a0a1c 70%, #0e0c22 100%);
+}
+
+.s8-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+.s8-note {
+  position: absolute;
+  right: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+/* background ridgelines */
+.s8-ridge {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: 18%;
+  height: 30%;
+  pointer-events: none;
+  background: rgba(16, 16, 38, 0.9);
+  clip-path: polygon(0 100%, 6% 55%, 15% 80%, 26% 40%, 38% 75%, 50% 30%, 63% 70%, 75% 45%, 88% 78%, 100% 50%, 100% 100%);
+}
+
+.s8-ridge--far {
+  bottom: 24%;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.s8-ridge--near {
+  background: rgba(10, 10, 26, 0.95);
+}
+
+/* ---------- The range ---------- */
+
+.s8-range {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(2px, 1vw, 18px);
+  padding-inline: var(--gutter);
+}
+
+.s8-mountain {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.s8-peak {
+  display: block;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: linear-gradient(
+    to top,
+    rgba(159, 122, 234, 0.15),
+    rgba(159, 122, 234, 0.65)
+  );
+  filter: drop-shadow(0 0 14px rgba(159, 122, 234, 0.3));
+}
+
+.s8-peak.is-hot {
+  background: linear-gradient(to top, rgba(159, 122, 234, 0.2), rgba(215, 255, 63, 0.75));
+  filter: drop-shadow(0 0 22px rgba(215, 255, 63, 0.35));
+  animation: s3-node-pulse 3s ease-in-out infinite;
+}
+
+.s8-peak.is-dead {
+  background: linear-gradient(to top, rgba(148, 163, 184, 0.1), rgba(148, 163, 184, 0.25));
+  filter: none;
+}
+
+.s8-label {
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-low);
+  max-width: 110px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.s8-mountain:hover .s8-label {
+  color: var(--text-hi);
+}
+
+/* ---------- Time instrument ---------- */
+
+.s8-instrument {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: min(38rem, 86vw);
+}
+
+.s8-year {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--era-accent);
+  text-shadow: var(--glow-era);
+}
+
+.s8-slider {
+  width: 100%;
+  appearance: none;
+  height: 2px;
+  background: var(--line-soft);
+  cursor: ew-resize;
+}
+
+.s8-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--era-accent);
+  box-shadow: var(--glow-era);
+  cursor: ew-resize;
+}
+
+.s8-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--era-accent);
+  box-shadow: var(--glow-era);
+}
+
+.s8-ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  color: var(--text-low);
+}
+
+@media (max-width: 760px) {
+  .s8-label { display: none; }
+}

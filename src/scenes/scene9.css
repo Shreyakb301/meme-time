@@ -1,0 +1,142 @@
+/* ============================================================
+   SCENE 9 — HALL IV · Memes Become Language (2015–2019)
+   Comic-book remix machine. Halftone, hard frames, pink ink.
+   ============================================================ */
+
+.s9-hall {
+  background: linear-gradient(to bottom, #08050e 0%, #120817 60%, #160a1c 100%);
+}
+
+.s9-halftone {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 77, 141, 0.14) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+  mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%);
+}
+
+.s9-plaque {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-scene);
+  z-index: 5;
+}
+
+.s9-note {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 6%;
+  z-index: 5;
+}
+
+/* ---------- The machine ---------- */
+
+.s9-machine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-6);
+  padding-inline: var(--gutter);
+}
+
+.s9-stagecount {
+  display: flex;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-low);
+}
+
+.s9-stagecount i {
+  font-style: normal;
+  color: var(--line-soft);
+}
+
+.s9-stagecount .is-on {
+  color: var(--era-accent);
+  text-shadow: 0 0 12px rgba(255, 77, 141, 0.6);
+}
+
+.s9-panel {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0;
+  border: 3px solid #fff;
+  box-shadow: 8px 8px 0 rgba(255, 77, 141, 0.35), 0 0 50px rgba(255, 77, 141, 0.15);
+  background: #0a0712;
+  cursor: pointer;
+  transform: rotate(-1deg);
+  transition: filter 0.6s var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.s9-panel:hover {
+  transform: rotate(0deg) translateY(-3px);
+}
+
+.s9-panel.is-dead {
+  filter: grayscale(1) brightness(0.6);
+}
+
+.s9-panel__img {
+  width: clamp(240px, 32vw, 420px);
+  display: block;
+}
+
+.s9-panel__type {
+  width: clamp(240px, 32vw, 420px);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  color: #fff;
+  -webkit-text-stroke: 1.5px #000;
+  text-align: center;
+  background: repeating-linear-gradient(135deg, #14091c 0 18px, #190b22 18px 36px);
+}
+
+.s9-caption {
+  width: 100%;
+  padding: 10px 14px;
+  background: #fff;
+  color: #0a0712;
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 1.2vw, 13px);
+  font-weight: 500;
+  text-align: center;
+  border-top: 3px solid #000;
+}
+
+/* ---------- Template tabs ---------- */
+
+.s9-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.s9-tab {
+  padding: 6px 12px;
+  border: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-low);
+  cursor: pointer;
+}
+
+.s9-tab.is-active {
+  border-color: var(--era-accent);
+  color: var(--era-accent);
+  box-shadow: 0 0 16px rgba(255, 77, 141, 0.25);
+}

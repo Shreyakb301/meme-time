@@ -1,0 +1,217 @@
+/* ============================================================
+   SCENE 1 — The Platform
+   The visitor stands at the start of internet history. A glowing
+   rail track recedes to a vanishing point in the dark; the years
+   are engraved along it like station markers. Scroll walks the
+   camera forward down the line.
+
+   3D notes: .s1-camera owns the perspective; .s1-world and
+   .s1-track keep preserve-3d, so NO mask/filter/overflow may be
+   set on them or the year slabs flatten back onto the track.
+   ============================================================ */
+
+/* ---------- Air: near-black sky over deep navy ---------- */
+
+.s1-sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(56% 34% at 50% 36%, rgba(0, 229, 255, 0.06), transparent 70%),
+    linear-gradient(to bottom, #030510 0%, #050816 38%, #070c1c 70%, #0b1020 100%);
+}
+
+/* Cold seam of light at the vanishing point */
+.s1-horizon {
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translateX(-50%);
+  width: min(78vw, 54rem);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--era-accent) 40%, transparent),
+    transparent
+  );
+  box-shadow: 0 0 28px color-mix(in srgb, var(--era-accent) 22%, transparent);
+}
+
+/* ---------- Camera and world ---------- */
+
+.s1-camera {
+  position: absolute;
+  inset: 0;
+  perspective: 640px;
+  perspective-origin: 50% 42%;
+}
+
+.s1-world {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+/* ---------- The track: rails into history ---------- */
+
+.s1-track {
+  position: absolute;
+  left: 50%;
+  bottom: -6%;
+  width: min(76vw, 42rem);
+  height: 6600px;
+  transform: translateX(-50%) rotateX(82deg);
+  transform-origin: bottom center;
+  transform-style: preserve-3d;
+  animation: s1-pulse 6.5s ease-in-out infinite;
+}
+
+/* Rails — glow hard up close, starve into the dark */
+.s1-track::before,
+.s1-track::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--era-accent) 85%, transparent) 0%,
+    color-mix(in srgb, var(--era-accent) 40%, transparent) 45%,
+    transparent 92%
+  );
+  box-shadow: 0 0 16px color-mix(in srgb, var(--era-accent) 45%, transparent);
+}
+
+.s1-track::before { left: 16%; }
+.s1-track::after { right: 16%; }
+
+/* Cross-ties — the pattern that streams past as you walk */
+.s1-ties {
+  position: absolute;
+  inset: 0 16%;
+  background-image: repeating-linear-gradient(
+    to top,
+    color-mix(in srgb, var(--era-accent) 30%, transparent) 0 3px,
+    transparent 3px 120px
+  );
+  mask-image: linear-gradient(to top, black 35%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to top, black 35%, transparent 90%);
+}
+
+@keyframes s1-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ---------- Years engraved along the line ---------- */
+
+.s1-years {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.s1-year {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotateX(-50deg);
+  transform-origin: bottom center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(6rem, 14vw, 9.5rem);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: color-mix(in srgb, var(--era-accent) 10%, transparent);
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--era-accent) 55%, transparent);
+  text-shadow: 0 0 34px color-mix(in srgb, var(--era-accent) 25%, transparent);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* The far light you never quite reach */
+.s1-year--today {
+  color: rgba(215, 255, 63, 0.1);
+  -webkit-text-stroke-color: rgba(215, 255, 63, 0.55);
+  text-shadow: 0 0 44px rgba(215, 255, 63, 0.3);
+  animation: s1-beacon 3.6s ease-in-out infinite;
+}
+
+@keyframes s1-beacon {
+  0%, 100% { text-shadow: 0 0 44px rgba(215, 255, 63, 0.22); }
+  50% { text-shadow: 0 0 70px rgba(215, 255, 63, 0.5); }
+}
+
+/* ---------- The sign: mounted in the world, not floating ---------- */
+
+.s1-sign {
+  position: absolute;
+  left: max(var(--gutter), 6vw);
+  top: 26%;
+  max-width: 34rem;
+}
+
+/* Backlight leaking around the sign face */
+.s1-sign::before {
+  content: '';
+  position: absolute;
+  inset: -18% -10%;
+  z-index: -1;
+  background: radial-gradient(
+    60% 60% at 40% 40%,
+    rgba(215, 255, 63, 0.1),
+    transparent 70%
+  );
+  filter: blur(12px);
+}
+
+/* Dark letterforms, halo-lit from behind — signage, not a headline */
+.s1-sign__name {
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: #0c1322;
+  -webkit-text-stroke: 1px rgba(209, 213, 219, 0.25);
+  text-shadow:
+    0 0 22px rgba(215, 255, 63, 0.25),
+    0 0 70px rgba(215, 255, 63, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.s1-sign__sub {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+.s1-sign__years {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--type-micro);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--era-accent);
+}
+
+/* ---------- Scroll hint ---------- */
+
+.s1-hint {
+  position: absolute;
+  bottom: max(4vh, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s1-hint__pulse {
+  animation: s1-hint 2.4s ease-in-out infinite;
+}
+
+@keyframes s1-hint {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
