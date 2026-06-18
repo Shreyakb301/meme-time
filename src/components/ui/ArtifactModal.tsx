@@ -85,6 +85,7 @@ export function ArtifactModalProvider({ children }: { children: ReactNode }) {
               <div className="amodal__media">
                 <ArtifactImage
                   src={meme.asset.localImage}
+                  apiQuery={meme.asset.giphySearchTerm}
                   alt={meme.name}
                   fallback={<span className="amodal__noimg">ARTIFACT IMAGE NOT RECOVERED</span>}
                 />

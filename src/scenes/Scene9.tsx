@@ -110,6 +110,7 @@ export default function Scene9() {
         >
           <ArtifactImage
             src={meme?.asset.localImage}
+            apiQuery={meme?.asset.giphySearchTerm}
             alt={meme?.name ?? remix.id}
             className="s9-panel__img"
             fallback={<span className="s9-panel__type">{meme?.name}</span>}

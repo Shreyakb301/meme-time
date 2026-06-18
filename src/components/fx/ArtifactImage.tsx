@@ -1,36 +1,63 @@
 'use client'
 
-import { useState, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
+import { fetchGiphyPreview } from '@/lib/enrich'
 
 /**
- * ArtifactImage — a real archival image with a graceful fallback.
- * If the file is missing or fails to load, the fallback (usually
- * a pixel reconstruction) is shown instead — the museum never
- * shows a broken frame, except the one that's an exhibit.
+ * ArtifactImage — a Giphy-powered artifact image with a graceful
+ * local fallback. If the API is unavailable, misses, or returns a
+ * broken URL, the curated local asset is used instead.
  */
 export default function ArtifactImage({
   src,
+  apiQuery,
   alt,
   className = '',
   style,
   fallback = null,
 }: {
   src?: string
+  apiQuery?: string
   alt: string
   className?: string
   style?: CSSProperties
   fallback?: ReactNode
 }) {
   const [failed, setFailed] = useState(false)
-  if (!src || failed) return <>{fallback}</>
+  const [apiSrc, setApiSrc] = useState<string | null>(null)
+  const [apiFailed, setApiFailed] = useState(false)
+
+  useEffect(() => {
+    let live = true
+    setFailed(false)
+    setApiFailed(false)
+    setApiSrc(null)
+    if (!apiQuery) return
+    fetchGiphyPreview(apiQuery).then((preview) => {
+      if (live) setApiSrc(preview)
+    })
+    return () => {
+      live = false
+    }
+  }, [apiQuery, src])
+
+  const displaySrc = apiSrc && !apiFailed ? apiSrc : src
+
+  if (!displaySrc || failed) return <>{fallback}</>
   return (
     <img
-      src={src}
+      src={displaySrc}
       alt={alt}
       className={className}
       style={style}
       draggable={false}
-      onError={() => setFailed(true)}
+      onError={() => {
+        if (displaySrc === apiSrc && src) {
+          setApiFailed(true)
+          return
+        }
+        setFailed(true)
+      }}
     />
   )
 }

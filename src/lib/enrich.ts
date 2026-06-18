@@ -1,8 +1,7 @@
 /**
- * Optional API enrichment. The museum is fully functional without
- * any of this: every fetcher fails soft to null, responses are
- * cached for the session, and callers must treat null as "use the
- * local curated data".
+ * Optional API enrichment. Every fetcher fails soft to null,
+ * responses are cached for the session, and callers should always
+ * keep curated local data as a fallback.
  */
 
 export interface WikiSummary {
@@ -37,18 +36,24 @@ export async function fetchWikiSummary(page: string): Promise<WikiSummary | null
   }
 }
 
+const giphyCache = new Map<string, string | null>()
+
 /** Giphy preview GIF, only if NEXT_PUBLIC_GIPHY_KEY is configured. */
 export async function fetchGiphyPreview(query: string): Promise<string | null> {
   const key = process.env.NEXT_PUBLIC_GIPHY_KEY
-  if (!key) return null
+  if (!key || !query) return null
+  if (giphyCache.has(query)) return giphyCache.get(query) ?? null
   try {
     const res = await fetch(
       `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${encodeURIComponent(query)}&limit=1&rating=g`,
     )
-    if (!res.ok) return null
+    if (!res.ok) throw new Error(String(res.status))
     const json = await res.json()
-    return json.data?.[0]?.images?.fixed_height_small?.url ?? null
+    const preview = json.data?.[0]?.images?.fixed_height?.url ?? null
+    giphyCache.set(query, preview)
+    return preview
   } catch {
+    giphyCache.set(query, null)
     return null
   }
 }

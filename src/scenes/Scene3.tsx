@@ -183,6 +183,7 @@ function CollectibleCard({
       <span className="s3-card__art">
         <ArtifactImage
           src={meme.asset.localImage}
+          apiQuery={meme.asset.giphySearchTerm}
           alt={meme.name}
           className="s3-card__img"
           fallback={fallback}

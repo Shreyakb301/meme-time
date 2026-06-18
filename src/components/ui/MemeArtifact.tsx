@@ -39,6 +39,7 @@ export default function MemeArtifact({
     >
       <ArtifactImage
         src={meme.asset.localImage}
+        apiQuery={meme.asset.giphySearchTerm}
         alt={meme.name}
         className={`exhibit__img ${imgClassName}`}
         fallback={children}

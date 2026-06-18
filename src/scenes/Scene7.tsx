@@ -157,7 +157,12 @@ export default function Scene7() {
                   reset()
                 }}
               >
-                <ArtifactImage src={m?.asset.localImage} alt={m?.name ?? s.id} className="s7-slide__img" />
+                <ArtifactImage
+                  src={m?.asset.localImage}
+                  apiQuery={m?.asset.giphySearchTerm}
+                  alt={m?.name ?? s.id}
+                  className="s7-slide__img"
+                />
                 <span>{m?.name}</span>
               </button>
             )

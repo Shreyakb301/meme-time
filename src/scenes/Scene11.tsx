@@ -33,11 +33,14 @@ export default function Scene11() {
       <LightPool x="50%" />
 
       {/* ghosts rising from the sand */}
-      {GHOSTS.map((id, i) => (
-        <div key={id} className="s11-ghost" style={{ left: `${24 + i * 44}%`, animationDelay: `${i * 9}s` }} aria-hidden="true">
-          <ArtifactImage src={getMeme(id)?.asset.localImage} alt="" />
-        </div>
-      ))}
+      {GHOSTS.map((id, i) => {
+        const meme = getMeme(id)
+        return (
+          <div key={id} className="s11-ghost" style={{ left: `${24 + i * 44}%`, animationDelay: `${i * 9}s` }} aria-hidden="true">
+            <ArtifactImage src={meme?.asset.localImage} apiQuery={meme?.asset.giphySearchTerm} alt="" />
+          </div>
+        )
+      })}
 
       {/* the stones */}
       <div className="s11-row">

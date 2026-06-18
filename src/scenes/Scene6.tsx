@@ -51,6 +51,7 @@ function MemeNode({ data }: { data: { meme: Meme } }) {
       <Handle type="target" position={Position.Top} className="s6-handle" />
       <ArtifactImage
         src={meme.asset.localImage}
+        apiQuery={meme.asset.giphySearchTerm}
         alt={meme.name}
         className="s6-node__img"
         fallback={<span className="s6-node__noimg">?</span>}

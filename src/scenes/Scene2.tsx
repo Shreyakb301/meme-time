@@ -162,11 +162,14 @@ function HampsterWindow() {
 }
 
 function AllYourBaseScreen() {
+  const meme = getMeme('all-your-base')
+
   return (
     <div className="s2-ayb">
       <Scanlines />
       <ArtifactImage
-        src={getMeme('all-your-base')?.asset.localImage}
+        src={meme?.asset.localImage}
+        apiQuery={meme?.asset.giphySearchTerm}
         alt="All Your Base Are Belong To Us — Zero Wing intro screenshot"
         className="s2-ayb__img"
       />
@@ -179,6 +182,8 @@ function AllYourBaseScreen() {
 }
 
 function Hall({ progress }: { progress: MotionValue<number> }) {
+  const dancingBaby = getMeme('dancing-baby')
+
   // CRT power-on: the room unsquashes over the first few percent
   const powerY = useTransform(progress, [0, 0.07], [0.004, 1])
   // Slow dolly into the room
@@ -243,7 +248,8 @@ function Hall({ progress }: { progress: MotionValue<number> }) {
             <Scanlines />
             <div>
               <ArtifactImage
-                src={getMeme('dancing-baby')?.asset.localImage}
+                src={dancingBaby?.asset.localImage}
+                apiQuery={dancingBaby?.asset.giphySearchTerm}
                 alt="Dancing Baby — the 1996 animation"
                 className="s2-case__img"
                 fallback={
