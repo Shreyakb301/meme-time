@@ -76,7 +76,7 @@
 .s7-island__label {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
 }
@@ -150,7 +150,7 @@
   color: var(--bg-void);
   font-family: var(--font-mono);
   font-weight: 600;
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   cursor: pointer;
   transition: box-shadow var(--dur-fast) var(--ease-out);
 }
@@ -184,7 +184,7 @@
   cursor: pointer;
   font-size: var(--type-micro);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 }
 
 @media (max-width: 760px) {

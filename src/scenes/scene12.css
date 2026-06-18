@@ -102,7 +102,7 @@
   white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0;
   color: var(--primary);
   text-shadow: 0 0 12px rgba(215, 255, 63, 0.5);
 }
@@ -116,7 +116,7 @@
   white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   color: var(--text-low);
   opacity: 0;
   transition: opacity var(--dur-fast) var(--ease-out);
@@ -130,7 +130,7 @@
 .s12-district__name {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
 }
@@ -177,7 +177,7 @@
   color: var(--primary);
   font-family: var(--font-mono);
   font-size: var(--type-label);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   cursor: pointer;
   transition: box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
 }

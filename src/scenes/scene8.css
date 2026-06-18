@@ -92,7 +92,7 @@
 .s8-label {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
   max-width: 110px;

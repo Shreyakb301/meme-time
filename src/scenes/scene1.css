@@ -121,7 +121,7 @@
   font-weight: 700;
   font-size: clamp(6rem, 14vw, 9.5rem);
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   color: color-mix(in srgb, var(--era-accent) 10%, transparent);
   -webkit-text-stroke: 2px color-mix(in srgb, var(--era-accent) 55%, transparent);
   text-shadow: 0 0 34px color-mix(in srgb, var(--era-accent) 25%, transparent);
@@ -169,7 +169,7 @@
 .s1-sign__name {
   font-size: clamp(2.8rem, 7vw, 5.2rem);
   line-height: 0.95;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   color: #0c1322;
   -webkit-text-stroke: 1px rgba(209, 213, 219, 0.25);
   text-shadow:
@@ -184,7 +184,7 @@
   border-top: 1px solid var(--line-soft);
   font-family: var(--font-mono);
   font-size: var(--type-label);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
 }
@@ -193,7 +193,7 @@
   margin-top: var(--space-2);
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--era-accent);
 }

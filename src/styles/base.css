@@ -30,7 +30,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: oldstyle-nums;
   overflow-x: clip;
 }
 
@@ -72,23 +72,24 @@ h2,
 h3 {
   font-family: var(--font-display);
   color: var(--text-hi);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .t-giant {
   font-size: var(--type-giant);
   line-height: var(--leading-tight);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-weight: 900;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
 .t-display {
   font-size: var(--type-display);
   line-height: var(--leading-tight);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -132,7 +133,6 @@ h3 {
 
 ::-webkit-scrollbar-thumb {
   background: var(--bg-surface);
-  border-radius: var(--radius-pill);
   border: 2px solid var(--bg-void);
 }
 

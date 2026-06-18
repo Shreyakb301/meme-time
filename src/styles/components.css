@@ -209,23 +209,26 @@
   display: grid;
   gap: var(--space-2);
   max-width: 26rem;
-  padding-left: var(--space-4);
-  border-left: 2px solid var(--era-accent);
+  padding: var(--space-3) 0 var(--space-3) var(--space-4);
+  border-left: 3px double var(--era-accent);
+  border-top: 1px solid var(--line-faint);
+  border-bottom: 1px solid var(--line-faint);
 }
 
 .plaque__id {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--era-accent);
 }
 
 .plaque__title {
   font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 900;
   color: var(--text-hi);
+  text-transform: uppercase;
 }
 
 .plaque__body {
@@ -237,7 +240,7 @@
 .field-note {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
 }
@@ -257,10 +260,11 @@
   left: var(--gutter);
   z-index: var(--z-chrome);
   font-family: var(--font-mono);
-  font-size: var(--type-label);
-  letter-spacing: var(--tracking-wide);
+  font-size: 0.95rem;
+  letter-spacing: 0;
   color: var(--text-hi);
-  mix-blend-mode: difference;
+  text-shadow: 2px 2px 0 var(--bg-void);
+  mix-blend-mode: normal;
 }
 
 /* Depth gauge — how deep into the strata you've scrolled */
@@ -300,7 +304,7 @@
 .depth-rail__readout {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   color: var(--text-low);
   writing-mode: vertical-rl;
 }
@@ -350,10 +354,11 @@
   gap: 6px;
   cursor: pointer;
   text-align: inherit;
+  border: 1px solid transparent;
 }
 
 .exhibit:hover .exhibit__img {
-  filter: brightness(1.08);
+  filter: contrast(1.12) saturate(0.92);
 }
 
 .exhibit__img {
@@ -361,14 +366,14 @@
 }
 
 .exhibit:hover .exhibit__img {
-  transform: translateY(-3px);
+  transform: translate(-2px, -2px);
 }
 
 .exhibit-tag {
   display: block;
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-low);
 }
@@ -385,7 +390,7 @@
   display: grid;
   place-items: center;
   padding: var(--gutter);
-  background: rgba(3, 5, 12, 0.86);
+  background: rgba(7, 6, 4, 0.9);
 }
 
 .amodal__plate {
@@ -398,9 +403,9 @@
   overflow-y: auto;
   padding: var(--space-8);
   background: var(--bg-deep);
-  border: 1px solid var(--line-faint);
-  border-left: 3px solid var(--era-accent);
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--line-soft);
+  border-left: 8px solid var(--era-accent);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.65);
 }
 
 .amodal__close {
@@ -426,7 +431,7 @@
   place-items: center;
   min-height: 14rem;
   background: var(--bg-void);
-  border: 1px solid var(--line-faint);
+  border: 2px solid var(--line-faint);
   padding: var(--space-4);
 }
 
@@ -438,7 +443,7 @@
 .amodal__noimg {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   color: var(--text-low);
 }
 
@@ -451,7 +456,7 @@
 .amodal__id {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--era-accent);
 }
@@ -468,7 +473,7 @@
   font-size: var(--type-label);
   color: var(--text-low);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .amodal__meta [data-status] {
@@ -520,9 +525,9 @@
   position: absolute;
   font-family: var(--font-display);
   font-size: clamp(10rem, 32vw, 30rem);
-  font-weight: 700;
+  font-weight: 900;
   line-height: 0.8;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   color: transparent;
   -webkit-text-stroke: 1px color-mix(in srgb, var(--era-accent) 35%, transparent);
   pointer-events: none;

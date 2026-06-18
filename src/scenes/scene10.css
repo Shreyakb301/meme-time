@@ -101,7 +101,7 @@
 .s10-tile__meta {
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   color: var(--text-low);
 }
 

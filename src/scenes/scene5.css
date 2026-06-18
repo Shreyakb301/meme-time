@@ -117,7 +117,7 @@
 .s5-pedestal__id {
   font-family: var(--font-mono);
   font-size: var(--type-micro);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--era-accent);
 }
@@ -134,7 +134,7 @@
   text-align: center;
   font-family: var(--font-mono);
   font-size: var(--type-label);
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   color: var(--text-low);
 }
 

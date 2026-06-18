@@ -71,7 +71,7 @@
   font-style: normal;
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   color: var(--era-accent);
 }
 
