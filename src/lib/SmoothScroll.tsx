@@ -11,7 +11,12 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const lenis = new Lenis({ lerp: 0.12, smoothWheel: true })
+    const lenis = new Lenis({
+      lerp: 0.085,
+      smoothWheel: true,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 0.9,
+    })
 
     let frame: number
     const raf = (time: number) => {
