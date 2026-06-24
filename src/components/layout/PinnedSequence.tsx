@@ -1,8 +1,9 @@
 'use client'
 
 import { useRef, type ReactNode } from 'react'
-import { useScroll, type MotionValue } from 'framer-motion'
+import { useScroll, useSpring, type MotionValue } from 'framer-motion'
 import type { Mood } from './Environment'
+import { SCROLL_SPRING } from '@/lib/motion'
 
 /**
  * PinnedSequence — sticky storytelling. The room stays pinned to
@@ -26,6 +27,7 @@ export default function PinnedSequence({
     target: ref,
     offset: ['start start', 'end end'],
   })
+  const progress = useSpring(scrollYProgress, SCROLL_SPRING)
 
   return (
     <section
@@ -35,7 +37,7 @@ export default function PinnedSequence({
       style={{ height: `${length * 100}svh` }}
     >
       <div className="pinned__viewport">
-        {typeof children === 'function' ? children(scrollYProgress) : children}
+        {typeof children === 'function' ? children(progress) : children}
       </div>
     </section>
   )
