@@ -11,6 +11,13 @@ import type { Variants } from 'framer-motion'
 export const EASE_OUT = [0.16, 1, 0.3, 1] as const
 export const EASE_IN_OUT = [0.65, 0, 0.35, 1] as const
 
+/** Scroll-linked choreography should settle quickly without echoing every wheel tick. */
+export const SCROLL_SPRING = {
+  stiffness: 90,
+  damping: 26,
+  mass: 0.35,
+} as const
+
 /** Default viewport config: animate once, fire a little early. */
 export const VIEWPORT_ONCE = { once: true, margin: '0px 0px -15% 0px' as const }
 
