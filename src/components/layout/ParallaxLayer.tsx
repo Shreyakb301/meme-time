@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef, type CSSProperties, type ReactNode } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { SCROLL_SPRING } from '@/lib/motion'
 
 /**
  * ParallaxLayer — absolute-positioned depth layer. `depth` sets
@@ -25,7 +26,8 @@ export default function ParallaxLayer({
     target: ref,
     offset: ['start end', 'end start'],
   })
-  const y = useTransform(scrollYProgress, [0, 1], [depth * -200, depth * 200])
+  const progress = useSpring(scrollYProgress, SCROLL_SPRING)
+  const y = useTransform(progress, [0, 1], [depth * -200, depth * 200])
 
   return (
     <motion.div ref={ref} className={`parallax-layer ${className}`} style={{ ...style, y }}>
