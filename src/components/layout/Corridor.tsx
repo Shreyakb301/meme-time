@@ -1,8 +1,9 @@
 'use client'
 
 import { useRef, type ReactNode } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import type { Mood } from './Environment'
+import { SCROLL_SPRING } from '@/lib/motion'
 
 /**
  * Corridor — a horizontal gallery you walk along sideways.
@@ -25,7 +26,8 @@ export default function Corridor({
     target: ref,
     offset: ['start start', 'end end'],
   })
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-75%'])
+  const progress = useSpring(scrollYProgress, SCROLL_SPRING)
+  const x = useTransform(progress, [0, 1], ['0%', '-75%'])
 
   return (
     <section
